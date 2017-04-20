@@ -4,6 +4,8 @@ class Matrix(object):
     def __init__(self, dat):
         if type(dat)==list and type(dat[0])==list:
             self.dat=dat
+        elif type(dat) == list:
+            self.dat= [[t] for t in dat]
 
     def width(self):
                 return len(self.dat[0])
