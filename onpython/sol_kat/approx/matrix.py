@@ -29,8 +29,8 @@ class Matrix(object):
     def get(self, p, q):
         return self.dat[p][q]
 
-    def __repr__(self):
-        return 'Matrix(%s)'%self.dat
+#    def __repr__(self):
+#        return 'Matrix(%s)'%self.dat
     
     def __mul__(self, r):
         res = Matrix.shape_init(len(self.dat), len(r.dat[0]))
