@@ -1,21 +1,22 @@
 import unittest
 
-class Box2(object):
-    def __init__(self):
-        self.s = 0
-        self.t = 1
-        
-    def __next__(self):
-        self.s += self.t
-        self.t += 1
-        if self.t > n:
-            raise StopIteration()
-        return self.s
+class partial_sum_natural_yield(object):
     
+    def __init__(self, n):
+        self.s = 0
+        self.n = n
+
     def __iter__(self):
         return self
+    
+    def __next__(self):
+        for t in range(len(n)):
+            self.s += self.t
+        return self.s
 
-
-class TestPartsum(unittest.Test.Case):
+class TestPartsum(unittest.TestCase):
     def test_partial_sum_natural(self):
-        self.assertUqual(list(partial_sum_natural_yield(5)), [1, 3, 6, 10, 15])
+        self.assertEqual(list(partial_sum_natural_yield(0, 5)), [1, 3, 6, 10, 15])
+
+if __name__ == '__main__':
+    unittest.main()
